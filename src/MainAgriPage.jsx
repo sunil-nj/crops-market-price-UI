@@ -15,6 +15,7 @@ const marketNameList1 = ['','Bangalore', 'Mysore', 'Kolar'];
 
 const cropsList = ['','paddy', 'wheat', 'ragi'];
 
+/*This design has to be changed */
 class MainAgriPage extends React.Component {
 
 constructor(props){
