@@ -5,13 +5,13 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { connect } from 'react-redux';
-import * as mainAgriActions from './actions/MainPage/MainAgriPage.actions.js';
+import * as mainAgriActions from '../../actions/MainPage/MainAgriPage.actions.js';
 
 const commoditiesList = [{label: 'Paddy', id: 1}, {label: 'Wheat', id: 2}, {label: 'Ragi', id: 3},
                    {label: 'Jowar', id: 4}, {label: 'Corn', id: 5}, {label: 'Cucumber', id: 6},];
 
 /*This design has to be changed */
-class MainAgriPage extends React.Component {
+class CropSelection extends React.Component {
 
 constructor(props){
     super(props);
@@ -98,19 +98,17 @@ render() {
 
 export const mapStateToProps = (state) => {
     return {
-        cropsList: state.mainAgriPageReducer && state.mainAgriPageReducer.cropsList,
+        cropsList: state.mainPage && state.mainPage.cropsList,
     }
 }
 
 export const mapDispatch = dispatch => {
-
     return {
         getMarketPrice: (params) => {
             mainAgriActions.getMarketPrice(params)(dispatch);
         }
     }
-
 }
 
 
-export default connect(mapStateToProps, mapDispatch)(MainAgriPage);
+export default connect(mapStateToProps, mapDispatch)(CropSelection);

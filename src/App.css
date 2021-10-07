@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin: 20px 20px 20px 20px;
+  margin: 18% 4% 0 4%;
 }
 
 .App-header {
@@ -33,12 +33,17 @@
 }
 
 .container {
-    height: 400px;
+    /*height: 400px;*/
     width:100%;
 }
 
 .row {
-    margin: 20px 20px 20px 20px;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.autocomplete-margin {
+    margin: 20px 0 20px 0;
 }
 
 .dropdown-marketName {
@@ -50,4 +55,33 @@
 .MuiDataGrid-columnHeader {
     align-items: right;
     justify-content: right;
+}
+
+.footer-icon {
+    position: fixed;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header {
+    background-color: green !important;
+}
+
+.headerName {
+ color: white !important;
+}
+
+.footerIconsColor {
+    color:grey;
 }
